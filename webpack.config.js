@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, 'client/index.js'),
+  entry: path.join(__dirname, 'client/index.jsx'),
   mode: process.env.NODE_ENV,
   output: {
     path: path.join(__dirname, '/build'),
@@ -39,8 +39,17 @@ module.exports = {
         },
       },
       {
-        test: /\application.scss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.css/i,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true,
+            },
+          },
+        ],
       },
     ],
   },

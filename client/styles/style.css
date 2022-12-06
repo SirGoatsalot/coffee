@@ -1,0 +1,40 @@
+:root {
+  --body-bg-color: rgb(255, 214, 153);
+  --title-bg-color: rgb(207, 173, 121);
+  --card-bg-color: rgb(255, 142, 66);
+  --body-font-color: black;
+  --font-family: 'Courier New';
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--body-font-color);
+  font-family: var(--font-family);
+}
+
+h1 {
+  display: flex;
+  font-size: 60px;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  padding-left: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--title-bg-color);
+}
+
+div.card {
+  display: flex;
+  height: 200px;
+  font-size: 40px;
+  background-color: var(--card-bg-color);
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.LabeledText {
+  font-size: 40px;
+}
