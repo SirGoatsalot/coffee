@@ -4,8 +4,8 @@ PROBLEM:
   Need a source for coffee recipes
 
 ----- MVP Features -----
-[] - A list of coffee recipes
-[] - Ability to add custom recipes
+[x] - A list of coffee recipes
+[x] - Ability to add custom recipes
 
 ----- Stretch Features -----
 [] - Flashy frontend -- custom animations and such
