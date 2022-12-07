@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const drinkSchema = new Schema({
-  name: String,
-  espresso_shots: Number,
-  ratio: {
-    coffee: Number,
-    milk: Number,
-    water: Number,
-    other: Number
-  },
+  name: { type: String, required: true },
+  brewType: { type: String, required: true },
+  grind: String,
+  gramsIn: Number,
+  gramsOut: Number,
+  brewTime: String,
+  waterTemp: Number,
+  author: String,
 });
 
 module.exports = mongoose.model('drink', drinkSchema);

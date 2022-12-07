@@ -1,0 +1,17 @@
+@use 'sass:color';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  background-color: $primary-color-light;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0.25rem 0.5rem $primary-color;
+  transition: background-color 0.5s;
+}
+
+:hover.card {
+  background-color: color.scale($primary-color-light, $lightness: -10%);
+}

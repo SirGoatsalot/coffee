@@ -1,0 +1,15 @@
+USERS:
+  People who love coffee, coffee enthusiasts
+PROBLEM:
+  Need a source for coffee recipes
+
+----- MVP Features -----
+[] - A list of coffee recipes
+[] - Ability to add custom recipes
+
+----- Stretch Features -----
+[] - Flashy frontend -- custom animations and such
+[] - Coffee header image from coffee API
+[] - Different site sections for different kinds of coffee
+[] - Input checks for custom recipes
+[] - Account that loads your custom recipes

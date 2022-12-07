@@ -14,7 +14,7 @@ module.exports = {
       publicPath: '/build/bundle.js',
     },
     proxy: {
-      '/api/leaders': 'http://localhost:3000',
+      '/drinks': 'http://localhost:3000',
     },
     port: 8080,
     magicHtml: true,
@@ -39,17 +39,8 @@ module.exports = {
         },
       },
       {
-        test: /\.css/i,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              modules: true,
-            },
-          },
-        ],
+        test: /\.scss/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },

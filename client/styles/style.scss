@@ -1,0 +1,33 @@
+@import 'variables.scss', 'cards.scss';
+
+body {
+  background-color: $primary-color-med-light;
+  color: $body-font-color;
+  font-family: $font-family;
+}
+
+header {
+  display: flex;
+  font-size: 3rem;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding-left: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $primary-color-light;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 0.2fr);
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.LabeledText {
+  font-size: 30px;
+}

@@ -1,0 +1,12 @@
+@use 'sass:color';
+
+$body-bg-color: rgb(255, 214, 153);
+$title-bg-color: rgb(207, 173, 121);
+$card-bg-color: rgb(255, 142, 66);
+$body-font-color: black;
+$font-family: 'Courier New';
+
+$primary-color: #3a3335;
+$primary-color-med-light: color.scale($primary-color, $lightness: 40%);
+$primary-color-light: color.scale($primary-color, $lightness: 70%);
+$secondary-color: #a38560;

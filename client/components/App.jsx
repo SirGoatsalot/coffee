@@ -1,11 +1,10 @@
 import React from 'react';
-import Card from './Card.jsx';
+import CardContainer from '../containers/CardContainer.jsx';
 
 const App = () => {
   return (
     <div>
-      <Card type='Number 1 Card' />
-      <Card type='Number 2 Card' />
+      <CardContainer />
     </div>
   );
 };
