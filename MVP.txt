@@ -8,8 +8,9 @@ PROBLEM:
 [x] - Ability to add custom recipes
 
 ----- Stretch Features -----
-[] - Flashy frontend -- custom animations and such
+[x] - Ability to delete recipes
 [] - Coffee header image from coffee API
+[] - Flashy frontend -- custom animations and such
 [] - Different site sections for different kinds of coffee
 [] - Input checks for custom recipes
 [] - Account that loads your custom recipes

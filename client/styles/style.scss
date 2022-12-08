@@ -3,7 +3,7 @@
 body {
   font-size: 1vw;
   background-color: $primary-color-med-light;
-  color: $body-font-color;
+  color: $font-color-med-dark;
   font-family: $font-family;
 }
 
@@ -17,7 +17,8 @@ header {
   padding-left: 70px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: $primary-color-light;
+  // background-color: $primary-color-light;
+  color: $font-color-dark;
 }
 
 .cardContainer {
@@ -27,5 +28,5 @@ header {
 }
 
 .fw-bold {
-  font-weight: bold;
+  color: $font-color-med-dark;
 }

@@ -61,4 +61,25 @@ drinkController.createDrink = async (req, res, next) => {
   }
 };
 
+drinkController.getDrink = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const result = await Drink.find({ _id: id });
+    res.locals.foundDrink = await result[0]._doc;
+    return next();
+  } catch (err) {
+    return next(err);
+  }
+};
+
+drinkController.deleteDrink = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    await Drink.deleteOne({ _id: id });
+    return next();
+  } catch (err) {
+    return next(err);
+  }
+};
+
 module.exports = drinkController;

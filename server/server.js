@@ -11,10 +11,9 @@ mongoose.connect(mongoURI);
 
 /**
  * ════════ TODO ════════
- * [] Serve static files (html, css)
- * [] Handle 404s
+ * [x] Serve static files (html, css)
+ * [x] Handle 404s
  * [] More robust error handling
- * [] Coffee Types enum▬
  *
  */
 
@@ -31,6 +30,17 @@ app.post('/drinks', drinkController.createDrink, (_req, res) => {
   return res.status(200).send(res.locals.createdDrink);
 });
 
+// Handle DELETE to '/drinks/:id' to delete drink in DB
+app.delete(
+  '/drinks/:id',
+  drinkController.getDrink,
+  drinkController.deleteDrink,
+  (_req, res) => {
+    return res.status(200).send(res.locals.foundDrink);
+  }
+);
+
+// Handle serving of static files
 app.use('/build', express.static(path.join(__dirname, '../build')));
 
 app.get('/', (_req, res) => {
