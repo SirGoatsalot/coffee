@@ -1,4 +1,5 @@
 const Drink = require('../models/drinkModel');
+const fetch = require('node-fetch');
 
 const drinkController = {};
 
@@ -32,6 +33,7 @@ drinkController.createDrink = async (req, res, next) => {
   try {
     const {
       name,
+      useZeldaName,
       brewType,
       grind,
       gramsIn,
@@ -44,8 +46,19 @@ drinkController.createDrink = async (req, res, next) => {
       return next(
         'drinkController.createDrink: Incorrect body formatting, unable to add to DB.'
       );
+    let zeldaName = '';
+    if (useZeldaName) {
+      const entryID = Math.floor(Math.random() * 390);
+      const entry = await fetch(
+        `https://botw-compendium.herokuapp.com/api/v2/entry/${entryID}`
+      ).then((data) => data.json());
+      console.log(entry);
+      zeldaName = entry.data.name;
+    }
+    console.log('Zelda Name: ', zeldaName);
     const createdDrink = await Drink.create({
       name,
+      zeldaName,
       brewType,
       grind,
       gramsIn,

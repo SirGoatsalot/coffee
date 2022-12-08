@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LabeledInput from './LableledInput.jsx';
 
 const CustomDrinkCard = (props) => {
@@ -9,13 +9,32 @@ const CustomDrinkCard = (props) => {
   const [gramsOut, setGramsOut] = useState(null);
   const [brewTime, setBrewTime] = useState(null);
   const [author, setAuthor] = useState(null);
+  const [useZeldaName, setUseZeldaName] = useState(true);
+
+  // useEffect(() => {
+  //   const getZeldaName = async () => {
+  //     try {
+  //       const entryID = Math.floor(Math.random() * 390);
+  //       const entry = await fetch(
+  //         `https://botw-compendium.herokuapp.com/api/v2/entry/${entryID}`
+  //       ).then((data) => data.json());
+  //       const newName = entry.name;
+  //       setZeldaName(newName);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   if (useZeldaName) getZeldaName();
+  // }, [useZeldaName]);
 
   return (
     <div className='card customDrinkCard'>
       <form
         onSubmit={(e) => {
+          setUseZeldaName(true);
           props.setNewDrink({
             name,
+            useZeldaName,
             brewType,
             grind,
             gramsIn,
@@ -34,7 +53,7 @@ const CustomDrinkCard = (props) => {
         <LabeledInput label='BREW TIME' updateValue={setBrewTime} />
         <LabeledInput label='AUTHOR' updateValue={setAuthor} />
         <input
-          class='cardButton'
+          className='cardButton'
           id='customDrinkSubmitButton'
           type='submit'
           value='Submit'

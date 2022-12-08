@@ -1,7 +1,7 @@
 @import 'variables.scss', 'cards.scss';
 
 body {
-  font-size: 1vw;
+  font-size: 1.5vw;
   background-color: $primary-color-med-light;
   color: $font-color-med-dark;
   font-family: $font-family;
@@ -9,7 +9,6 @@ body {
 
 header {
   display: flex;
-  font-size: 3rem;
   position: sticky;
   top: 0px;
   left: 0px;
@@ -18,7 +17,20 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
   // background-color: $primary-color-light;
-  color: $font-color-dark;
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-size: 3rem;
+    color: $font-color-dark;
+  }
+  h3 {
+    font-weight: normal;
+    padding-top: 10px;
+    align-self: baseline;
+    font-size: 1rem;
+    color: $font-color-med;
+  }
 }
 
 .cardContainer {

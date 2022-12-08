@@ -58,12 +58,28 @@
 }
 
 .cardHeader {
-  font-size: 20px;
   color: $font-color-dark;
   display: flex;
+  flex-direction: column;
   align-self: center;
-  margin: 1rem;
+  align-content: center;
+  margin: 0;
   margin-top: -0.5rem;
+  h1 {
+    margin: 0;
+    font-size: 1rem;
+    align-self: center;
+  }
+  h3 {
+    margin: 0;
+    font-size: 0.7rem;
+    margin: 0.15rem;
+    color: $font-color-med-light;
+    align-self: center;
+  }
+  h3:empty {
+    margin: 0.5rem;
+  }
 }
 
 .customDrinkCard {
