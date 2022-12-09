@@ -5,7 +5,7 @@ import Header from './Header.jsx';
 const App = () => {
   return (
     <div>
-      <Header />
+      <Header name={'Custom Recipe'} />
       <CardContainer />
     </div>
   );

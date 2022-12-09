@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LabeledInput from './LableledInput.jsx';
+import CardHeader from '../containers/CardHeader.jsx';
 
 const CustomDrinkCard = (props) => {
   const [name, setName] = useState('');
@@ -29,6 +30,7 @@ const CustomDrinkCard = (props) => {
 
   return (
     <div className='card customDrinkCard'>
+      <CardHeader name={'Custom Recipe'} />
       <form
         onSubmit={(e) => {
           setUseZeldaName(true);

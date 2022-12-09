@@ -84,5 +84,17 @@
 
 .customDrinkCard {
   padding: 1rem;
+  padding-left: 1.25rem;
   flex-direction: column;
+  input {
+    font-size: 0.75rem;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  label {
+    margin: 0.25rem;
+  }
+  .cardHeader {
+    margin-top: 0.5rem;
+  }
 }

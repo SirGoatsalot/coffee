@@ -4,8 +4,7 @@ const Header = () => {
   return (
     <div>
       <header>
-        <h1>Coffee</h1>
-        <h3>(with Zelda names)</h3>
+        <h1>Hyrule Coffee-pendium</h1>
       </header>
     </div>
   );
